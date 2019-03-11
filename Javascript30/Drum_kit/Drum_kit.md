@@ -138,24 +138,24 @@ window.addEventListener("keydown", function(e) {
 e.keyCode를 이용해 현재 누를 keyCode값과 동일한 data-key를 가진 DOM을 audio와 .key를 가진 값을 저장.
 
 ```
-    window.addEventListener('keydown', function(e)
-        const audio = document.querySeletor(`audio[data-key="${e.keyCode}"]`);
-        const key = document.querySeletor(`.key[data-key="${e.keyCode}"]`);
-        if(!audio) return; //누른 키보드의 keyCode값이 없으면 정지
-        audio.play(); //audio를 플레이시킨다.
-    });
+window.addEventListener('keydown', function(e)
+    const audio = document.querySeletor(`audio[data-key="${e.keyCode}"]`);
+    const key = document.querySeletor(`.key[data-key="${e.keyCode}"]`);
+    if(!audio) return; //누른 키보드의 keyCode값이 없으면 정지
+    audio.play(); //audio를 플레이시킨다.
+});
 ```
 
 audio의 값이 null값이면 중지, 누른값이 있다면 audio를 재생한다.
 
 ```
-    window.addEventListener('keydown', function(e)
-        const audio = document.querySeletor(`audio[data-key="${e.keyCode}"]`);
-        const key = document.querySeletor(`.key[data-key="${e.keyCode}"]`);
-        if(!audio) return; //누른 키보드의 keyCode값이 없으면 정지
-        audio.play(); //audio를 플레이시킨다.
-        key.classList.add('playing');
-    });
+window.addEventListener('keydown', function(e)
+    const audio = document.querySeletor(`audio[data-key="${e.keyCode}"]`);
+    const key = document.querySeletor(`.key[data-key="${e.keyCode}"]`);
+    if(!audio) return; //누른 키보드의 keyCode값이 없으면 정지
+    audio.play(); //audio를 플레이시킨다.
+    key.classList.add('playing');
+});
 ```
 
 현재 누른 키보드의 keyCode값과 동일한 .key에 playing 클래스를 추가한다.
