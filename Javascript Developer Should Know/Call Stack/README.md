@@ -29,7 +29,7 @@ function zero() {
 zero();
 ```
 
-[Call Stack](https://www.notion.so/reactdev/Call-Stack-809e3af85f774ff49b5f9b8b1045abd0)
+---
 
 ```javascript
 function hello() {
@@ -44,3 +44,5 @@ hello();
 ```
 
 'Maximum call stack size exceeded' 스택 메모리가 넘침.
+
+[Call Stack](https://www.notion.so/reactdev/Call-Stack-809e3af85f774ff49b5f9b8b1045abd0)
