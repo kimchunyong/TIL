@@ -127,7 +127,7 @@ window.addEventListener("keydown", function(e) {
 
 keydown이벤트가 일어날때 이벤트 객체는 keyCode값을 가지고있다.
 
-```javascript
+```
 window.addEventListener("keydown", function(e) {
   console.log(e.keyCode); // KeyCode값
   const audio = document.querySeletor(`audio[data-key="${e.keyCode}"]`);
@@ -137,7 +137,7 @@ window.addEventListener("keydown", function(e) {
 
 e.keyCode를 이용해 현재 누를 keyCode값과 동일한 data-key를 가진 DOM을 audio와 .key를 가진 값을 저장.
 
-```javascript
+```
     window.addEventListener('keydown', function(e)
         const audio = document.querySeletor(`audio[data-key="${e.keyCode}"]`);
         const key = document.querySeletor(`.key[data-key="${e.keyCode}"]`);
