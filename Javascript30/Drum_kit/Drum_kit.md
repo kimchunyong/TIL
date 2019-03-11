@@ -148,7 +148,7 @@ e.keyCode를 이용해 현재 누를 keyCode값과 동일한 data-key를 가진 
 
 audio의 값이 null값이면 중지, 누른값이 있다면 audio를 재생한다.
 
-```javascript
+```
     window.addEventListener('keydown', function(e)
         const audio = document.querySeletor(`audio[data-key="${e.keyCode}"]`);
         const key = document.querySeletor(`.key[data-key="${e.keyCode}"]`);
