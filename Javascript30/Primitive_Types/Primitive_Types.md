@@ -1,6 +1,6 @@
-#Primitive Types
+# Primitive Types
 
-#javascript Styles
+# javascript Styles
 
 - 기본자료형
 - Booleans
