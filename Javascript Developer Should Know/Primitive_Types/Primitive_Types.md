@@ -1,7 +1,5 @@
 # Primitive Types
 
-# javascript Styles
-
 - 기본자료형
 - Boolean
 - String
