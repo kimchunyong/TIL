@@ -1,12 +1,12 @@
 # Primitive Types
 
 - 기본자료형
-- Boolean
-- String
-- Number
-- null
-- undefined
-- Symbols(ECMAScript6에서 추가됨)
+  - Boolean
+  - String
+  - Number
+  - null
+  - undefined
+  - Symbols(ECMAScript6에서 추가됨)
 - 별도로 Object가 있음
 
 ---
