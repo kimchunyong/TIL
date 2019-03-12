@@ -13,6 +13,7 @@
 # Javascript Developer Should Know
 
 - [Call Stack](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Call%20Stack/Call_Stack.md)
+- [Primitive Types](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Primitive_Types/Primitive_Types.md)
 
 ---
 
