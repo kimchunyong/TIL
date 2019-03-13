@@ -58,3 +58,5 @@ console.log(a, b, c, d); //{name: "안녕", v: 3}name: "안녕"v: 3__proto__: Ob
 
 ![Alt text](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F352e2a4e-8c74-40eb-b908-3e864eefc898%2F_5.jpg?width=1290)
 값을 참조를 하게되므로 b가 변하면 모두가 변한다.
+
+참고:[notion](https://www.notion.so/reactdev/457d66890320406a96e9c36c9234784d)
