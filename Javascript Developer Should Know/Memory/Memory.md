@@ -25,7 +25,7 @@ console.log(a, b, c, d); //test 안녕 test test
 
 b = a의 값을 보고 c = b 값을 보고 d = b 을 바라보게한 상황
 
-![Alt text](https://cdn-images-1.medium.com/max/1600/1*i9nTlOSPH3q-sCd5-WHg-g.pnghttps://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5a068ab8-93f6-4668-af5d-2671dbd815f9%2F_2.png?width=1290)
+![Alt text](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5a068ab8-93f6-4668-af5d-2671dbd815f9%2F_2.png?width=1290)
 
 k의 값을 할당한후 b = k를 바라보게하면 메모리는 이런식이된다.
 
