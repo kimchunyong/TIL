@@ -1,10 +1,10 @@
 # Truthy and Falsy
 
-JavaScript는 불리언 문맥에서 형변환을 사용합니다.
+## Truthy
+
+JavaScript는 불리언 문맥에서 true로 처리되는 값.
 따로 거짓으로 정의된 값이 아니면 모두 참입니다.
 (false, 0, "", null, undefined, NaN)는 거짓
-
-## Truthy
 
 ```javascript
 if (true)
@@ -21,6 +21,8 @@ if (-Infinity)
 ```
 
 ## Falsy
+
+불리언 문맥에서 false로 처리되는 값.
 
 ```javascript
 if (false)
