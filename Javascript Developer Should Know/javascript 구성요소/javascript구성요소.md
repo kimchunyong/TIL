@@ -30,67 +30,67 @@
 
 ### 3.1 값식
  ```javascript
-    3
-    7
-    true
-    "abc"
+3
+7
+true
+"abc"
  ```
 
 ### 3.2 연산식
 ```javascript
-    1 + 3 // 4
+1 + 3 // 4
 ```
 
 ### 3.3 호출식
 ```javascript
-    function a(){
-        return 1 + 4;
-    }
-    a(); // 5
+function a(){
+    return 1 + 4;
+}
+a(); // 5
 ```
 
 하지만 값은 메모리에 저장하지않으면 메모리에서 사라짐.
 
 예제)
 ```javascript
-    3;
-    4;
-    true;
+3;
+4;
+true;
 ```
 위 처럼 값식만을 사용하면 메모리에서 사라지기 때문에 꺼내 쓸수가없다.
 
 ## 4. IDENTIFIER - 식별자
 ```javascript
-    let a = 3;
-    console.log(a) //3
+let a = 3;
+console.log(a) //3
 ```
 변수는 메모리상에 a라는 주소 이름을 할당하는것, 그 안에는 3이라는 값이 들어있다.
 ```javascript
-    typeof a; //number
+typeof a; //number
 ```
 또한 식별자는 메모리상의 a라는 주소이름 뿌만아니라 DataType을 포함하고있다.
 식별자에는 값이 들어올수도있고 참조가 들어올수도있다.
 ```javascript
-    let a = 3;
-    let b = a; //b라는 주소에 a라는 값을 복사한다.
+let a = 3;
+let b = a; //b라는 주소에 a라는 값을 복사한다.
 ```
 복사
 (모든 값은 복사를 통해 일어난다)
 ```javascript
-    let a = 3;
-    let b = a; //a에 메모리주소 에있는 값인 3을 복사함.
-    a = 7;
-    //복사가 되어
-    console.log(a); //7
-    console.log(b); //3
+let a = 3;
+let b = a; //a에 메모리주소 에있는 값인 3을 복사함.
+a = 7;
+//복사가 되어
+console.log(a); //7
+console.log(b); //3
 ```
 참조형
 ```javascript
-    let a = [1,2,3];
-    let b = a;
-    a.push(4);
-    console.log(a); //[1,2,3,4]
-    console.log(b); //[1,2,3,4]
+let a = [1,2,3];
+let b = a;
+a.push(4);
+console.log(a); //[1,2,3,4]
+console.log(b); //[1,2,3,4]
 ```
 b는 원래부터 a를 가르키고 있었다. 값을 참조하기때문에 a가 바뀌면 b도 바뀜.
 
@@ -103,19 +103,19 @@ b는 원래부터 a를 가르키고 있었다. 값을 참조하기때문에 a가
 블록문(또는 다른 언어에서는 복합문)은 0개 이상의 구문을 묶을 때 사용합니다.
 
 ```javascript
-    var x = 1;
-    let y = 1;
+var x = 1;
+let y = 1;
 
-    if (true) {
-        var x = 2;
-        let y = 2;
-    }
+if (true) {
+    var x = 2;
+    let y = 2;
+}
 
-    console.log(x);
-    // expected output: 2
+console.log(x);
+// expected output: 2
 
-    console.log(y);
-    // expected output: 1
+console.log(y);
+// expected output: 1
 ```
 
 #### 5.2 break
@@ -123,25 +123,25 @@ b는 원래부터 a를 가르키고 있었다. 값을 참조하기때문에 a가
 break 문은 현재 루프, switch나 label 문을 종료하고 프로그램 제어를 종료된 문의 다음 문으로 넘깁니다.
 
 ```javascript
-    outer_block: {
+outer_block: {
     inner_block: {
         console.log('1');
         break outer_block; // inner_block과 outer_block 둘다 빠져나옴
         console.log(':-('); // 건너뜀
     }
     console.log('2'); // 건너뜀
-    }
+}
 ```
 다음 코드는 또한 label 달린 블록이 있는 break 문을 사용하지만 그 break 문이 block_2를 참조하지만 block_1 내에 있기에 구문 오류(Syntax Error)가 발생합니다. break 문은 항상 자신이 참조하는 label 내에 중첩되어야 합니다.
 ```javascript
-    block_1: {
-        console.log('1');
-        break block_2; // SyntaxError: label을 찾을 수 없음
-    }
+block_1: {
+    console.log('1');
+    break block_2; // SyntaxError: label을 찾을 수 없음
+}
 
-    block_2: {
-        console.log('2');
-    }
+block_2: {
+    console.log('2');
+}
 ```
 
 #### 5.3 continue
