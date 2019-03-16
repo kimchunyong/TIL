@@ -12,12 +12,11 @@
 
 # Javascript Developer Should Know
 
-- [Call Stack](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Call%20Stack/Call_Stack.md)
+- [Javascript 구성요소](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/javascript%20%EA%B5%AC%EC%84%B1%EC%9A%94%EC%86%8C/javascript%EA%B5%AC%EC%84%B1%EC%9A%94%EC%86%8C.md)
+- [Memory](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Memory/Memory.md)
 - [Primitive Types](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Primitive_Types/Primitive_Types.md)
 - [Primitive Type & Reference Type](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Primitive%20Type%20%26%20Reference%20type/Primitive%20Type%20%26%20Reference%20type.md)
-
-- [Memory](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Memory/Memory.md)
-- [Javascript 구성요소](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/javascript%20%EA%B5%AC%EC%84%B1%EC%9A%94%EC%86%8C/javascript%EA%B5%AC%EC%84%B1%EC%9A%94%EC%86%8C.md)
+- [Call Stack](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Call%20Stack/Call_Stack.md)
 
 ---
 
