@@ -59,3 +59,14 @@ OR연산자는 피연산자중 1가지만 true이면 결과는 명백한 true이
     true && "something" //"something"
     true && "something" && true // true
 ```
+
+```javascript
+    var mynumber = mynumber || 10; //mynumber가 정의되어있으면 그 값이 유지되고 그렇지않으면 값이 10이 된다.
+    console.log(mynumber); //10
+```
+
+```javascript
+    var mynumber = 0;
+    var mynumber = mynumber || 10; //0은 false로 인식되어 값이 10으로 설정이 되어버린다.
+    console.log(mynumber); //10
+```
