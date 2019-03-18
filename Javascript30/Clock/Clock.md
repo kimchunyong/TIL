@@ -39,10 +39,10 @@ bottom  |   100%
 
 ```css
     .hand {
-    transform: rotate(90deg); //시계 방향으로 90도 회전
-    transform-origin: 100%; //기준점을 오른쪽 끝으로해서 돈다.
-    transition: 0.05s; //transition-duration-  트랜지션이 일어나는 지속 시간
-    transition-timing-function: cubic-bezier(0.61, -0.21, 1, -0.68); //시간에 따른 파라미터 값의 변화율을 명시하는 함수
+        transform: rotate(90deg); //시계 방향으로 90도 회전
+        transform-origin: 100%; //기준점을 오른쪽 끝으로해서 돈다.
+        transition: 0.05s; //transition-duration-  트랜지션이 일어나는 지속 시간
+        transition-timing-function: cubic-bezier(0.61, -0.21, 1, -0.68); //시간에 따른 파라미터 값의 변화율을 명시하는 함수
     }
 ```
 
