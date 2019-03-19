@@ -35,3 +35,38 @@ if ("")
 if (``)
 if (document.all)
 ```
+
+## 연산자 우선순위
+
+!가 가장높으며 && , || 순으로 계산이 된다.
+```javascript
+    false && false || true && true //true
+    false && false || true && false //false
+    /*위 코드는 아래와 같다*/
+    (false && false) || (true && true)
+    (false && false) || (true && false)
+```
+
+## 지연평가
+
+```javascript
+    true || true || true || false || true
+```
+OR연산자는 피연산자중 1가지만 true이면 결과는 명백한 true이므로 자바스크립트는 지연평가를 결정하고 불필요한 작업을 피한다.
+
+```javascript
+    true || "something" //true
+    true && "something" //"something"
+    true && "something" && true // true
+```
+
+```javascript
+    var mynumber = mynumber || 10; //mynumber가 정의되어있으면 그 값이 유지되고 그렇지않으면 값이 10이 된다.
+    console.log(mynumber); //10
+```
+
+```javascript
+    var mynumber = 0;
+    var mynumber = mynumber || 10; //0은 false로 인식되어 값이 10으로 설정이 되어버린다.
+    console.log(mynumber); //10
+```
