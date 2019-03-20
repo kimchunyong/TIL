@@ -63,7 +63,7 @@ class TodoList {
   listDel () {
     const ListEvtBind = this.$ListEle.children[0];
     Array.from(ListEvtBind.children).forEach(item => {
-      item.addEventListener('click', ({ target }) => {
+      item.children[1].addEventListener('click', ({ target }) => {
         let parentEle = target.parentElement;
         let parentGetKey = parentEle.innerText.trim().slice(0, -2); // text를 추출해서 비교
         // 특정 배열의 요소 제거

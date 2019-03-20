@@ -279,7 +279,7 @@ function () {
 
       var ListEvtBind = this.$ListEle.children[0];
       Array.from(ListEvtBind.children).forEach(function (item) {
-        item.addEventListener('click', function (_ref2) {
+        item.children[1].addEventListener('click', function (_ref2) {
           var target = _ref2.target;
           var parentEle = target.parentElement;
           var parentGetKey = parentEle.innerText.trim().slice(0, -2); // text를 추출해서 비교
