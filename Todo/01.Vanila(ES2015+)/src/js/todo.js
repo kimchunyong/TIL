@@ -3,6 +3,7 @@ class TodoList {
     // data
     this.data = [];
     this.idx = 0;
+    this.key = null;
 
     // view
   }
@@ -31,6 +32,7 @@ class TodoList {
       this.listDraw();
       this.idx = this.idx + 1;
       this.$ele_inp.value = '';
+      this.$ele_inp.focus();
     });
     return this;
   }
@@ -63,11 +65,10 @@ class TodoList {
     Array.from(ListEvtBind.children).forEach(item => {
       item.addEventListener('click', ({ target }) => {
         let parentEle = target.parentElement;
-        let parentGetKey = parentEle.getAttribute('data-key');
+        let parentGetKey = parentEle.innerText.trim().slice(0, -2); // text를 추출해서 비교
         // 특정 배열의 요소 제거
-
         const removeData = this.data.filter(item => {
-          return Math.floor(item.index) !== Math.floor(parentGetKey);
+          return item.text !== parentGetKey;
         });
         this.data = removeData;
         removeData.map((item, idx) => {

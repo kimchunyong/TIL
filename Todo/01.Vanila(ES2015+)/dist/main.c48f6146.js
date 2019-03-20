@@ -204,7 +204,8 @@ function () {
 
     // data
     this.data = [];
-    this.idx = 0; // view
+    this.idx = 0;
+    this.key = null; // view
   }
 
   _createClass(TodoList, [{
@@ -249,6 +250,8 @@ function () {
 
         _this.idx = _this.idx + 1;
         _this.$ele_inp.value = '';
+
+        _this.$ele_inp.focus();
       });
       return this;
     }
@@ -279,10 +282,11 @@ function () {
         item.addEventListener('click', function (_ref2) {
           var target = _ref2.target;
           var parentEle = target.parentElement;
-          var parentGetKey = parentEle.getAttribute('data-key'); // 특정 배열의 요소 제거
+          var parentGetKey = parentEle.innerText.trim().slice(0, -2); // text를 추출해서 비교
+          // 특정 배열의 요소 제거
 
           var removeData = _this2.data.filter(function (item) {
-            return Math.floor(item.index) !== Math.floor(parentGetKey);
+            return item.text !== parentGetKey;
           });
 
           _this2.data = removeData;
@@ -338,7 +342,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51262" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65013" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
