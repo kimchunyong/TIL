@@ -1,0 +1,49 @@
+@import "config";
+
+.todo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .todo-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 8%;
+    .todo-title {
+      padding: 20px 0;
+      font-size: 28px;
+      font-weight: 900;
+      text-align: center;
+    }
+    .todo-list {
+      margin: 40px 0;
+      .todo-list-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #e4e4e4;
+        cursor: pointer;
+        .todo-btn--del {
+          color: #9c27b0;
+        }
+      }
+    }
+
+    .todo-form {
+      display: flex;
+      height: 30px;
+      .todo-input {
+        flex: 1 1 auto;
+        border: 0;
+        border-bottom: 1px solid #000;
+        outline: none;
+      }
+      .todo-btn {
+        flex: 0 0 auto;
+        padding: 0 10px;
+        background-color: #009688;
+        color: #fff;
+      }
+    }
+  }
+}

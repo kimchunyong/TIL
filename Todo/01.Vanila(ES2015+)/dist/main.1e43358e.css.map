@@ -1,0 +1,1 @@
+{"version":3,"sources":["src\\scss\\common.scss"],"names":[],"mappings":"AAAA,eAAe,CAAC;EACd,gBAAgB,EAAE,GAAG,GACtB","file":"main.1e43358e.css","sourceRoot":"..","sourcesContent":[".todo-container {\n  background-color: red;\n}\n"]}
