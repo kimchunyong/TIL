@@ -24,3 +24,7 @@
 
 - [Drum kit](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Drum_kit/Drum_kit.md)
 - [JS + CSS Clock](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Clock/Clock.md)
+
+# 알고리즘
+
+- [가운데 글자 가져오기](https://github.com/kimchunyong/TIL/blob/master/Algorithm/import%20middle%20letters.md)
