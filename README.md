@@ -16,7 +16,7 @@
 - [Memory](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Memory/Memory.md)
 - [Primitive Types](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Primitive_Types/Primitive_Types.md)
 - [Primitive Type & Reference Type](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Primitive%20Type%20%26%20Reference%20type/Primitive%20Type%20%26%20Reference%20type.md)
-- [Call Stack](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Call%20Stack/Call_Stack.md)
+- [Call Stack](https://github.com/kimchunyong/TIL/blob/master/Javascript30/CSS%20Variables/CSS_Variables.md)
 
 ---
 
@@ -24,10 +24,11 @@
 
 - [Drum kit](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Drum_kit/Drum_kit.md)
 - [JS + CSS Clock](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Clock/Clock.md)
+- [CSS Variables](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Clock/Clock.md)
 
 # Todo
 
-- [ES2015+](https://github.com/kimchunyong/TIL/tree/master/Todo/01.Vanila(ES2015%2B))
+- [ES2015+](<https://github.com/kimchunyong/TIL/tree/master/Todo/01.Vanila(ES2015%2B)>)
 
 # 알고리즘
 
