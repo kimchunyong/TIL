@@ -24,10 +24,11 @@
 
 - [Drum kit](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Drum_kit/Drum_kit.md)
 - [JS + CSS Clock](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Clock/Clock.md)
+- [CSS Variables](https://github.com/kimchunyong/TIL/blob/master/Javascript30/CSS%20Variables/CSS_Variables.md)
 
 # Todo
 
-- [ES2015+](https://github.com/kimchunyong/TIL/tree/master/Todo/01.Vanila(ES2015%2B))
+- [ES2015+](<https://github.com/kimchunyong/TIL/tree/master/Todo/01.Vanila(ES2015%2B)>)
 
 # 알고리즘
 
