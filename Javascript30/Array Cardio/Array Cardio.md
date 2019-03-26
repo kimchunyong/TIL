@@ -75,3 +75,25 @@
     });
     console.log(borns);
 ```
+
+## 1.2 Array.prototype.map()
+2. Give us an array of the inventors' first and last names (array의 첫번째와 마지막이름을 합쳐라.)
+
+```javascript
+    const fullName = inventors.map(item => {
+        return item.first + '' + item.last;
+    });
+    console.log(fullName);
+```
+
+## 1.3 Array.prototype.sort()
+3.Sort the inventors by birthdate, oldest to youngest 정렬해라 태어난 날짜를 내림차순
+
+```javascript
+    const birthdates = inventors.sort((a, b) => {
+        if (a.year > b.year) {
+            return -1; // a 와 b를 비교해서 a가 b보다 클때 return -1을하면 내림차순으로 정렬
+        };
+    });
+    console.log(birthdates);
+```
