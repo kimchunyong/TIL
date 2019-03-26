@@ -87,7 +87,7 @@
 ```
 
 ## 1.3 Array.prototype.sort()
-3.Sort the inventors by birthdate, oldest to youngest 정렬해라 태어난 날짜를 내림차순
+3.Sort the inventors by birthdate, oldest to youngest (정렬해라 태어난 날짜를 내림차순)
 
 ```javascript
     const birthdates = inventors.sort((a, b) => {
