@@ -97,3 +97,12 @@
     });
     console.log(birthdates);
 ```
+
+### 1.4Array.prototype.reduce()
+4. How many years did all the inventors live? 얼마나 많이 살았나 다 합쳐서?
+```javascript
+    const lives = inventors.reduce((acc, cur) => {
+        return acc + (cur.passed - cur.year);
+    }, 0);
+    console.log(lives);
+```
