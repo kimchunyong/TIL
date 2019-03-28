@@ -39,6 +39,7 @@ class TodoList {
   getList ($ListEle) {
     if (!$ListEle) return;
     this.$ListEle = document.querySelector(`${$ListEle}`);
+    return this;
   }
   listDraw () {
     // reduce로 this.data만큼 돌려서 html retrun값
@@ -58,6 +59,7 @@ class TodoList {
       }, `<ul>`) + `</ul>`;
     this.$ListEle.innerHTML = ListItems;
     this.listDel();
+    this.getChk('.todo-chk');
     return this;
   }
   listDel () {
@@ -78,6 +80,18 @@ class TodoList {
       });
     });
     return this;
+  }
+  getChk ($chk) {
+    this.$chk = document.querySelectorAll($chk);
+    this.listChk();
+    return this;
+  }
+  listChk () {
+    Array.from(this.$chk).forEach(item => {
+      item.addEventListener('click', ({ target }) => {
+        target.parentElement.classList.toggle('on');
+      });
+    });
   }
 }
 

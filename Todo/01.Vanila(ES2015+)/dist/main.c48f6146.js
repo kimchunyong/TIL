@@ -260,6 +260,7 @@ function () {
     value: function getList($ListEle) {
       if (!$ListEle) return;
       this.$ListEle = document.querySelector("".concat($ListEle));
+      return this;
     }
   }, {
     key: "listDraw",
@@ -270,6 +271,7 @@ function () {
       }, "<ul>") + "</ul>";
       this.$ListEle.innerHTML = ListItems;
       this.listDel();
+      this.getChk('.todo-chk');
       return this;
     }
   }, {
@@ -298,6 +300,23 @@ function () {
         });
       });
       return this;
+    }
+  }, {
+    key: "getChk",
+    value: function getChk($chk) {
+      this.$chk = document.querySelectorAll($chk);
+      this.listChk();
+      return this;
+    }
+  }, {
+    key: "listChk",
+    value: function listChk() {
+      Array.from(this.$chk).forEach(function (item) {
+        item.addEventListener('click', function (_ref3) {
+          var target = _ref3.target;
+          target.parentElement.classList.toggle('on');
+        });
+      });
     }
   }]);
 
@@ -342,7 +361,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65013" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51463" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
