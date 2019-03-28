@@ -98,11 +98,21 @@
     console.log(birthdates);
 ```
 
-### 1.4Array.prototype.reduce()
+### 1.4 Array.prototype.reduce()
 4. How many years did all the inventors live? 얼마나 많이 살았나 다 합쳐서?
 ```javascript
     const lives = inventors.reduce((acc, cur) => {
         return acc + (cur.passed - cur.year);
     }, 0);
     console.log(lives);
+```
+
+### 1.5 Sort()
+5.sort the inventors by years lived 정렬해라 오래 살은 순으로
+```javascript
+    const liveds = inventors.sort((a, b) => {
+        console.log("a:" + (a.passed - a.year), "b:" + (b.passed - b.year));
+        if ((a.passed - a.year) > ((b.passed - b.year))) return -1;
+    });
+    console.log(liveds);
 ```
