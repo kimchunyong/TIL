@@ -116,3 +116,45 @@
     });
     console.log(liveds);
 ```
+
+## 1.6 create a list of Boulevards in Paris that contain 'de' anywhere in the name
+
+```javascript
+    // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+    const category = document.querySelector('.mw-category');
+    const links = Array.from(category.querySelectorAll('a'));
+    const de = links
+        .map(link => link.textContent)
+        .filter(streetName => streetName.includes('de'));
+    //["Boulevard de l'Amiral-Bruix", "Boulevard des Capucines", "Boulevard de la Chapelle", "Boulevard de Clichy", "Boulevard de l'Hôpital", "Boulevard des Italiens", "Boulevard de la Madeleine", "Boulevard de Magenta", "Boulevard de Rochechouart", "Boulevard de Sébastopol", "Boulevard de Strasbourg", "Boulevard de la Zone"]
+```
+
+## 1.7 sort Exercise
+Sort the people alphabetically by last name
+```javascript
+    const alpha = people.sort((lastOne, nextOne) => {
+        const [aLast, aFirst] = lastOne.split(', ');
+        const [bLast, bFirst] = nextOne.split(', ');
+        return aLast > bLast ? 1 : -1;
+    });
+    console.log(alpha);
+```
+
+## 1.8 Reduce Exercise
+Sum up the instances of each of these
+
+```javascript
+    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car',
+            'truck'
+        ];
+
+    const transportation = data.reduce((obj, item) => {
+        if (!obj[item]) {
+            obj[item] = 0;
+        }
+        obj[item]++;
+        return obj;
+    }, {});
+
+    console.log(transportation);
+```
