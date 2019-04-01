@@ -17,6 +17,7 @@
 - [Primitive Types](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Primitive_Types/Primitive_Types.md)
 - [Primitive Type & Reference Type](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Primitive%20Type%20%26%20Reference%20type/Primitive%20Type%20%26%20Reference%20type.md)
 - [Call Stack](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Call%20Stack/Call_Stack.md)
+- [Object](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/object/object.md)
 
 ---
 
@@ -25,6 +26,8 @@
 - [Drum kit](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Drum_kit/Drum_kit.md)
 - [JS + CSS Clock](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Clock/Clock.md)
 - [CSS Variables](https://github.com/kimchunyong/TIL/blob/master/Javascript30/CSS%20Variables/CSS_Variables.md)
+- [Array Cardio](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Array%20Cardio/Array%20Cardio.md)
+- [flex gallery](https://github.com/kimchunyong/TIL/blob/master/Javascript30/flex%20gallery/flexGallery.md)
 
 # Todo
 

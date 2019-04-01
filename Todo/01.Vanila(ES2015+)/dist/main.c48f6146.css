@@ -1,5 +1,5 @@
 /*
- *reset 
+ *reset
 */
 html,
 body,
@@ -145,6 +145,7 @@ button {
 
 .todo-chk {
   display: inline-block;
+  width: 30px;
 }
 .todo-chk:after {
   /*Add another block-level blank space*/
@@ -158,6 +159,7 @@ button {
   border-width: 0 2px 2px 0;
   /*Rotate the L 45 degrees to turn it into a checkmark*/
   transform: rotate(45deg);
+  margin: 0 auto;
 }
 
 .todo-wrap {
@@ -186,6 +188,16 @@ button {
   padding: 10px;
   border-bottom: 1px solid #e4e4e4;
   cursor: pointer;
+}
+.todo-wrap .todo-container .todo-list .todo-list-item.on {
+  color: #9c27b0;
+  text-decoration: line-through;
+}
+.todo-wrap .todo-container .todo-list .todo-list-item.on .todo-chk:after {
+  border-color: #9c27b0;
+}
+.todo-wrap .todo-container .todo-list .todo-list-item.on .todo-btn--del {
+  text-decoration: none;
 }
 .todo-wrap .todo-container .todo-list .todo-list-item .todo-btn--del {
   color: #9c27b0;

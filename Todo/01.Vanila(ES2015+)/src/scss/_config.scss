@@ -1,6 +1,7 @@
 /*
- *reset 
+ *reset
 */
+
 html,
 body,
 div,
@@ -82,13 +83,14 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 
 /* HTML5 display-role reset for older browsers */
 
@@ -103,70 +105,68 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+    display: block;
 }
 
 body {
-  line-height: 1;
+    line-height: 1;
 }
 
 ol,
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 blockquote,
 q {
-  quotes: none;
+    quotes: none;
 }
 
 blockquote {
-  &:before,
-  &:after {
-    content: "";
-    content: none;
-  }
+    &:before,
+    &:after {
+        content: "";
+        content: none;
+    }
 }
 
 q {
-  &:before,
-  &:after {
-    content: "";
-    content: none;
-  }
+    &:before,
+    &:after {
+        content: "";
+        content: none;
+    }
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 button {
-  display: block;
-  padding: 0;
-  background: none;
-  border: 0;
-  cursor: pointer;
-  outline: none;
+    display: block;
+    padding: 0;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    outline: none;
 }
 
 .todo-chk {
-  display: inline-block;
-
-  &:after {
-    /*Add another block-level blank space*/
-    content: "";
-    display: block;
-
-    /*Make it a small rectangle so the border will create an L-shape*/
-    width: 3px;
-    height: 8px;
-
-    /*Add a white border on the bottom and left, creating that 'L' */
-    border: solid #000;
-    border-width: 0 2px 2px 0;
-
-    /*Rotate the L 45 degrees to turn it into a checkmark*/
-    transform: rotate(45deg);
-  }
+    display: inline-block;
+    width: 30px;
+    &:after {
+        /*Add another block-level blank space*/
+        content: "";
+        display: block;
+        /*Make it a small rectangle so the border will create an L-shape*/
+        width: 3px;
+        height: 8px;
+        /*Add a white border on the bottom and left, creating that 'L' */
+        border: solid #000;
+        border-width: 0 2px 2px 0;
+        /*Rotate the L 45 degrees to turn it into a checkmark*/
+        transform: rotate(45deg);
+        margin: 0 auto;
+    }
 }
