@@ -1,5 +1,7 @@
 ## 계산기 예제
 
+myid에 controller(컨트롤러)에서 Model(모델)로부터 데이터를 가공받아 viw(뷰)로 값을 전달하여 화면단에 나오게한다.
+
 ```html
 <div id="myid"></div>
 ```
