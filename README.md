@@ -18,6 +18,7 @@
 - [Primitive Type & Reference Type](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Primitive%20Type%20%26%20Reference%20type/Primitive%20Type%20%26%20Reference%20type.md)
 - [Call Stack](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Call%20Stack/Call_Stack.md)
 - [Object](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/object/object.md)
+- [static](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/static%20method/staticMethod.md)
 
 ---
 
