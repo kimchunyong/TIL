@@ -56,6 +56,7 @@
         const html = matchArray.map(place => {
             const regex = new RegExp(target.value, 'gi');
             const cityName = place.city.replace(regex, `<span class="hl">${target.value}</span>`);
+            const stateName = place.state.replace(regex, `<span class="hl">${target.value}</span>`);
             return `
                 <li>
                     <span class="name">${cityName}${place.state}</span>
