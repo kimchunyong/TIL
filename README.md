@@ -19,6 +19,7 @@
 - [Call Stack](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Call%20Stack/Call_Stack.md)
 - [Object](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/object/object.md)
 - [static](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/static%20method/staticMethod.md)
+- [class](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/class/class.md)
 
 ---
 
@@ -29,6 +30,7 @@
 - [CSS Variables](https://github.com/kimchunyong/TIL/blob/master/Javascript30/CSS%20Variables/CSS_Variables.md)
 - [Array Cardio](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Array%20Cardio/Array%20Cardio.md)
 - [flex gallery](https://github.com/kimchunyong/TIL/blob/master/Javascript30/flex%20gallery/flexGallery.md)
+- [Type Ahead](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Type%20Ahead/Type%20Ahead.md)
 
 # MVC
 
