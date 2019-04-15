@@ -37,3 +37,10 @@ mongodb_test라는 데이터베이스 만듬
 ```
 
 mongodb_test 데이터베이스를 제거.
+
+Document조회
+
+```shell
+    db.articles.find();
+    db.articles.find().pretty();
+```
