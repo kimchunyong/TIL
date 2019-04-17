@@ -19,3 +19,26 @@ $ nvm use v10.15.3 # v10.15.3 를 사용 할 때마다 터미널에서 실행
 $ nvm alias default v10.15.3 # 윈도우는 작동하지 않음
 $ node -v # 현재 버전 확인하기
 ```
+
+### 기본사용법
+
+```javascript
+const Koa = require('koa'); //koa모듈을 가져온다.
+const app = new Koa(); //app에 Koa인스턴스생성
+
+app.use(ctx =>{
+    ctx.body = 'Hello Koa';
+});
+
+app.listen(3000, ()=>{
+    console.log('server is listening to port 3000');
+})
+
+```
+
+```shell
+$node src
+server is listening to port 3000
+```
+
+http://locallhost:3000 에 들어가면 'Hello Koa'라는 텍스트가 찍힌다.
