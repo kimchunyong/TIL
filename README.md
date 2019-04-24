@@ -22,6 +22,7 @@
 - [class](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/class/class.md)
 - [REST_API](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/REST_API/REST_API.md)
 - [SSR_CSR](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/SSR%20CSR/SSR%20CSR.md)
+- [function with closure](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/function%26closure/function%26closure.md)
 
 ---
 
@@ -33,6 +34,10 @@
 - [Array Cardio](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Array%20Cardio/Array%20Cardio.md)
 - [flex gallery](https://github.com/kimchunyong/TIL/blob/master/Javascript30/flex%20gallery/flexGallery.md)
 - [Type Ahead](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Type%20Ahead/Type%20Ahead.md)
+- [Array Cardio Day 2](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Array%20Cardio2/Array%20Cardio2.md)
+- [Fun with HTML5 Canvas](https://github.com/kimchunyong/TIL/blob/master/Javascript30/HTML5%20Canvas/HTML5%20Canvas.md)
+- [Dev Tools Domination](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Dev%20Tools%20Tricks/Dev%20Tools%20Tricks.md)
+- [Hold Shift and Check Checkboxes](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Hold%20Shift%20Check/Hold%20Shift%20Check.md)
 
 # MVC
 
