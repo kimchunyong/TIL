@@ -23,7 +23,7 @@
 - [REST_API](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/REST_API/REST_API.md)
 - [SSR_CSR](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/SSR%20CSR/SSR%20CSR.md)
 - [function with closure](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/function%26closure/function%26closure.md)
-
+- [Asynchronous & Synchronous](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Asynchronous%20%26%20Synchronous/Asynchronous%20%26%20Synchronous.md)
 ---
 
 # Javascript 30
