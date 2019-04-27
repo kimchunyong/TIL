@@ -39,6 +39,8 @@
 - [Dev Tools Domination](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Dev%20Tools%20Tricks/Dev%20Tools%20Tricks.md)
 - [Hold Shift and Check Checkboxes](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Hold%20Shift%20Check/Hold%20Shift%20Check.md)
 
+- [Custom video play](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Custom%20video%20play/Custom%20video%20play.md)
+
 # MVC
 
 - [calculate](https://github.com/kimchunyong/TIL/blob/master/mvc/calculate/README.md)
