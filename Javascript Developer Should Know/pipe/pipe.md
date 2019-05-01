@@ -1,13 +1,14 @@
 ## 함수형프로그래밍
 
 ### pipe
+
 ```javascript
-const pipe = (...fns) => (value) => fns.reduce((acc, fn) => fn(acc), value);
+const pipe = (...fns) => value => fns.reduce((acc, fn) => fn(acc), value);
 
 pipe(
   x => x + 10,
   x => x + 20,
-  x => x * 100,
+  x => x * 100
 )(0);
 // => (((0 + 10) + 20) * 100) = 3000
 ```
@@ -16,10 +17,10 @@ pipe(
 
 ```javascript
 const compose = (...fns) => x => fns.reduceRight((v, f) => f(v), x);
-compose (
+compose(
   x => x + 10,
   x => x + 20,
-  x => x * 100,
+  x => x * 100
 )(0);
 
 // => (((0 * 100) + 20) + 10) = 30
