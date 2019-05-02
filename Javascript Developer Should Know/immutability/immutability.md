@@ -21,4 +21,14 @@ console.log(statement); //hello
 console.log(otherStr); //ll
 ```
 
+### array
+
+```javascript
+var arr = [];
+console.log(arr.length); // 0
+
+var v2 = arr.push(2); // arr.push()는 메소드 실행 후 arr의 length를 반환
+console.log(arr.length); // 1
+```
+
 # mutability
