@@ -31,4 +31,39 @@ var v2 = arr.push(2); // arr.push()는 메소드 실행 후 arr의 length를 반
 console.log(arr.length); // 1
 ```
 
+### object
+
+```javascript
+var user = {
+  name: 'Lee',
+  address: {
+    city: 'Seoul'
+  }
+};
+
+var myName = user.name; // 변수 myName은 string 타입이다.
+
+user.name = 'Kim';
+console.log(myName); // Lee
+
+myName = user.name;  // 재할당
+console.log(myName); // Kim
+```
+
+```javascript
+var user1 = {
+  name: 'Lee',
+  address: {
+    city: 'Seoul'
+  }
+};
+
+var user2 = user1; // 변수 user2는 객체 타입이다.
+
+user2.name = 'Kim';
+
+console.log(user1.name); // Kim
+console.log(user2.name); // Kim
+```
+
 # mutability
