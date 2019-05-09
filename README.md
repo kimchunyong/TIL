@@ -25,6 +25,7 @@
 - [function with closure](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/function%26closure/function%26closure.md)
 - [Asynchronous & Synchronous](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/Asynchronous%20%26%20Synchronous/Asynchronous%20%26%20Synchronous.md)
 - [pipe와 compose](https://github.com/kimchunyong/TIL/blob/master/Javascript%20Developer%20Should%20Know/pipe/pipe.md)
+
 ---
 
 # Javascript 30
@@ -39,8 +40,8 @@
 - [Fun with HTML5 Canvas](https://github.com/kimchunyong/TIL/blob/master/Javascript30/HTML5%20Canvas/HTML5%20Canvas.md)
 - [Dev Tools Domination](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Dev%20Tools%20Tricks/Dev%20Tools%20Tricks.md)
 - [Hold Shift and Check Checkboxes](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Hold%20Shift%20Check/Hold%20Shift%20Check.md)
-
 - [Custom video play](https://github.com/kimchunyong/TIL/blob/master/Javascript30/Custom%20video%20play/Custom%20video%20play.md)
+- [key_sequence](https://github.com/kimchunyong/TIL/blob/master/Javascript30/key_sequence/key_sequence.md)
 
 # MVC
 
