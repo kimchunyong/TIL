@@ -28,3 +28,23 @@ req.onreadystatechange = function(e) {
   }
 };
 ```
+
+## Json데이터
+
+Ajax 요청에 대한 서버의 응답은 주로 HTML, XML, JSON이 사용된다. 이 중 가장 일반적인 데이터 형식은 JSON(JavaScript Object Notation)이다.
+
+```javascript
+{
+    "name":"kim",
+    "age" : 31,
+    "gender":"male",
+    "addres":"bucheon"
+}
+```
+
+자바스크립트의 객체 리터럴과 매우 흡사하다. 하지만 JSON은 순수한 텍스트로 구성된 데이터이다.
+
+키는 반드시 큰따옴표(작은따옴표 사용불가)로 둘러싸야 한다.
+
+JSON.stringify() 메소드는 객체를 JSON 형식의 문자열로 변환한다.
+JSON.parse() 메소드는 JSON 데이터를 가진 문자열을 객체로 변환한다.
