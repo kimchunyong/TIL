@@ -28,3 +28,58 @@
 
 - DELETE
   - 삭제 버튼 클릭시 삭제
+
+## JSON-SERVER
+
+json-server로 db.json를 바라보게한뒤 node에서 ./server.js 실행
+
+```shell
+  json-server --watch db.json
+```
+
+`./server.js`파일
+```javascript
+  const jsonServer = require('json-server')
+  const server = jsonServer.create()
+  const router = jsonServer.router('server/db.json')
+  const middlewares = jsonServer.defaults()
+
+  server.use(middlewares)
+  server.use('/api', router)  
+  server.listen(3000, function () {
+      console.log('JSON Server is running')
+  })
+```
+
+`http://localhost:3000/`으로 접속
+
+## webpack으로 devserver실행
+
+`npm start` 명령어를 터미널에서 작성해서 사용.
+```shell
+  npm start
+```
+
+```javascript
+devServer: {
+    hot: true,
+    historyApiFallback: true,
+    inline: true,
+    open: true,
+    overlay: {
+      warnings: true,
+      errors: true,
+    },
+    stats: {
+      color: true,
+    },
+    proxy: {
+        '/api': {
+            target: 'http://localhost:3000',
+            secure: false
+        }
+    }
+  },
+```
+
+`http://localhost:8080/`으로 접속
