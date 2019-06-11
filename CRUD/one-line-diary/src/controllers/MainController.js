@@ -18,6 +18,7 @@ export default {
         this.postApi(input);
         WriteModel.getApi()
             .then(data => this.onPostResult(data))
+            .catch(error => console.error(error));
     },
 
     onReset(e){
