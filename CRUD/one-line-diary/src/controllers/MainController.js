@@ -11,7 +11,10 @@ export default {
     },
 
     onSubmit(input){
-        console.log(tag,input)
+        console.log(tag,input);
+        fetch('http://localhost:3000/posts')
+            .then(res => res.json())
+            .then(data => console.log(data));
     },
 
     onReset(e){

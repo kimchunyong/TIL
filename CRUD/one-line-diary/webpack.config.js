@@ -44,12 +44,6 @@ module.exports = {
     },
     stats: {
       color: true,
-    },
-    proxy: {
-        '/api': {
-            target: 'http://localhost:3000',
-            secure: false
-        }
     }
   },
   optimization: {
