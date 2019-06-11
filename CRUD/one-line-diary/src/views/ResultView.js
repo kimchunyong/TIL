@@ -9,12 +9,11 @@ ResultView.setup = function(el){
 }
 
 ResultView.render = function(data = []) {
-    console.log(tag, data);
+    console.log(tag, data,data.length,);
     this.el.innerHTML = data.length ? this.getInputResultHTML(data) : '첫 내용을 입력해주세요';
 }
 
 ResultView.getInputResultHTML = function(data){
-    console.log(data)
     debugger;
 }
 

@@ -13,7 +13,6 @@ FormView.setup = function(el) {
     return this;
 }
 
-
 FormView.focusEvts = function(){
     this.formInp.addEventListener('keyup', e => this.onKeyup(e));
     this.formBtn.addEventListener('click', e => this.onClick(e));

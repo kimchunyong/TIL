@@ -8,16 +8,16 @@ const tag = '[MainController]';
 export default {
     init() {
         FormView.setup(document.querySelector('.form__txt'))
-            .on('@submit',e => this.onSubmit(e.detail.input))
+            .on('@submit', e => this.onSubmit(e.detail.input))
             .on('@reset', e => this.onReset(e))
 
         ResultView.setup(document.querySelector('.write__list'))
     },
 
     onSubmit(input){
-        console.log(tag,input);
         this.postApi(input);
-        this.onPostResult(WriteModel.getApi());
+        WriteModel.getApi()
+            .then(data => this.onPostResult(data))
     },
 
     onReset(e){
