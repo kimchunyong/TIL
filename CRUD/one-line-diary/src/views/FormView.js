@@ -23,6 +23,7 @@ FormView.onKeyup = function(e){
     const enter = 13;
     if(e.keyCode !== enter) return;
     this.emit('@submit',{input:this.formInp.value});
+    this.emit('@reset');
 }
 
 FormView.onClick = function(e){
@@ -31,6 +32,7 @@ FormView.onClick = function(e){
     if(ValueFormInp) {
         //빈칸이 아닐때 실행
         this.emit('@submit',{input:this.formInp.value});
+        this.emit('@reset');
         return;
     }
     alert('다시 입력해주세요');
