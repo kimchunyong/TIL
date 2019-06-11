@@ -34,7 +34,7 @@
 json-server로 db.json를 바라보게한뒤 node에서 ./server.js 실행
 
 ```shell
-  json-server --watch db.json
+  json-server --watch ./db.json
 ```
 
 `./server.js`파일
@@ -45,7 +45,7 @@ json-server로 db.json를 바라보게한뒤 node에서 ./server.js 실행
   const middlewares = jsonServer.defaults()
 
   server.use(middlewares)
-  server.use('/api', router)  
+  server.use('/api', router)
   server.listen(3000, function () {
       console.log('JSON Server is running')
   })
