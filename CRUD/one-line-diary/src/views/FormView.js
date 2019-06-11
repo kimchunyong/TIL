@@ -4,33 +4,33 @@ const tag = '[FormView]';
 
 const FormView = Object.create(View);
 
-FormView.setup = function(el) {
+FormView.setup = function (el) {
     this.init(el);
     this.formInp = el.querySelector('.form__inp');
     this.formBtn = el.querySelector('.form__btn');
     this.focusEvts();
-    
+
     return this;
 }
 
-FormView.focusEvts = function(){
+FormView.focusEvts = function () {
     this.formInp.addEventListener('keyup', e => this.onKeyup(e));
     this.formBtn.addEventListener('click', e => this.onClick(e));
 }
 
-FormView.onKeyup = function(e){
+FormView.onKeyup = function (e) {
     const enter = 13;
-    if(e.keyCode !== enter) return;
-    this.emit('@submit',{input:this.formInp.value});
+    if (e.keyCode !== enter) return;
+    this.emit('@submit', { input: this.formInp.value });
     this.emit('@reset');
 }
 
-FormView.onClick = function(e){
+FormView.onClick = function (e) {
     const ValueFormInp = this.formInp.value.length;
-    
-    if(ValueFormInp) {
+
+    if (ValueFormInp) {
         //빈칸이 아닐때 실행
-        this.emit('@submit',{input:this.formInp.value});
+        this.emit('@submit', { input: this.formInp.value });
         this.emit('@reset');
         return;
     }
