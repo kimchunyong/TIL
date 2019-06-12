@@ -29,6 +29,26 @@
 - DELETE
   - 삭제 버튼 클릭시 삭제
 
+## 폴더구조 one-line-diary
+
+```javascript
++--one-line-diary
+  +-- node_modules
+  +-- public
+  |   +-- index.html
+  +-- src
+  |   +-- controllers
+  |   +-- models
+  |   +-- views
+  |   +-- index.js
+  +-- .babelc
+  +-- db.json
+  +-- package-lock.json
+  +-- package.json
+  +-- server.js
+  +-- webpack.config.js
+```
+
 ## JSON-SERVER
 
 json-server로 db.json를 바라보게한뒤 node에서 ./server.js 실행
