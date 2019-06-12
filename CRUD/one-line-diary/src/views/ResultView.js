@@ -26,7 +26,9 @@ ResultView.getInputResultHTML = function (data) {
 
 ResultView.getInputReslutList = function (item) {
     return `<li class="write__item">
-        <span class="write__txt">${item.text}</span> <span class="write__date">${item.date}</span>
+        <span class="write__txt">${item.text}</span>
+        <span class="write__date">작성일:${item.date}</span>
+        <span class="btn fourth write__del">del</span>
     </li>`;
 }
 
