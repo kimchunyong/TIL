@@ -21,14 +21,13 @@ ResultView.getInputResultHTML = function (data) {
         console.log(item, idx);
         html += this.getInputReslutList(item);
         return html;
-    }, '<ul class="write__menu">') + '</ul>'
-    debugger;
+    }, '<ul class="write__menu">') + '</ul>';
 }
 
 ResultView.getInputReslutList = function (item) {
     return `<li class="write__item">
-        ${item.text}
-    </li>`
+        ${item.text} <span class="write__date">${item.date}</span>
+    </li>`;
 }
 
 export default ResultView;

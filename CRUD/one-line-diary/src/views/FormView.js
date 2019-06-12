@@ -19,10 +19,17 @@ FormView.focusEvts = function () {
 }
 
 FormView.onKeyup = function (e) {
+    const ValueFormInp = this.formInp.value.length;
     const enter = 13;
+
     if (e.keyCode !== enter) return;
-    this.emit('@submit', { input: this.formInp.value });
-    this.emit('@reset');
+
+    if (ValueFormInp) {
+        this.emit('@submit', { input: this.formInp.value });
+        this.emit('@reset');
+        return;
+    }
+    alert('다시 입력해주세요');
 }
 
 FormView.onClick = function (e) {
