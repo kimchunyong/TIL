@@ -13,6 +13,8 @@ export default {
 
         ResultView.setup(document.querySelector('.write__list'))
             .on('@delete', e => this.onDelete(e.detail.query))
+            .on('@modified', e => this.onModified(e, e.detail.changeNum))
+
     },
 
     onSubmit(input) {
@@ -25,8 +27,12 @@ export default {
         formTarget.focus();
     },
 
-    onDelete(delNum){
+    onDelete(delNum) {
         this.deleteApi(delNum);
+    },
+
+    onModified(e, changeNum) {
+        ResultView.renderInp(e, changeNum)
     },
 
     nowDate() {
@@ -47,7 +53,7 @@ export default {
         if (day < 10) {
             day = "0" + day;
         }
-        
+
 
         const today = `${year}-${month}-${day} ${ampm}${hour}:${minutes}:${seconds}`;
         return today;
@@ -56,7 +62,7 @@ export default {
 
     postApi(inputTxt, currDate) {
         const url = 'http://localhost:3000/posts';
-        
+
         fetch(url, {
             headers: {
                 'Accept': 'application/json',
@@ -70,14 +76,14 @@ export default {
             .catch(error => {
                 console.error(error);
             })
-            .then(()=>{
+            .then(() => {
                 WriteModel.getApi()
                     .then(data => this.onPostResult(data))
                     .catch(error => console.error(error));
             })
     },
 
-    deleteApi(delNum){
+    deleteApi(delNum) {
         const url = `http://localhost:3000/posts/${delNum}`;
 
         fetch(url, {
@@ -92,7 +98,7 @@ export default {
             .catch(error => {
                 console.error(error);
             })
-            .then(()=>{
+            .then(() => {
                 WriteModel.getApi()
                     .then(data => this.onPostResult(data))
                     .catch(error => console.error(error));

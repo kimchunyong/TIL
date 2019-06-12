@@ -8,12 +8,12 @@ FormView.setup = function (el) {
     this.init(el);
     this.formInp = el.querySelector('.form__inp');
     this.formBtn = el.querySelector('.form__btn');
-    this.focusEvts();
+    this.cusEvt();
 
     return this;
 }
 
-FormView.focusEvts = function () {
+FormView.cusEvt = function () {
     this.formInp.addEventListener('keyup', e => this.onKeyup(e));
     this.formBtn.addEventListener('click', e => this.onClick(e));
 }

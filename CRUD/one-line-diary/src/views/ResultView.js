@@ -6,14 +6,13 @@ const ResultView = Object.create(View);
 
 ResultView.setup = function (el) {
     this.init(el);
-    console.log(this)
-    this.delEvt();
+    this.cusEvt();
 
     return this;
 }
 
 ResultView.messages = {
-    NO_RESULT: '첫 내용을 입력해주세요',
+    NO_RESULT: '첫 내용을 입력해주세요.',
 }
 
 ResultView.render = function (data = []) {
@@ -35,16 +34,33 @@ ResultView.getInputReslutList = function (item, idx) {
     </li>`;
 }
 
-ResultView.delEvt = function(){
+ResultView.cusEvt = function () {
     this.el.addEventListener('click', e => this.onDel(e));
+    this.el.addEventListener('dblclick', e => this.onModified(e));
 }
 
-ResultView.onDel = function(e){
-    const targetConfirm = event.target.tagName.toLowerCase() === 'span' && event.target.classList[2] === 'write__del';
-    
+ResultView.onDel = function (e) {
+    const evtTarget = event.target;
+    const targetConfirm = evtTarget.tagName.toLowerCase() === 'span'
+        && evtTarget.classList[2] === 'write__del';
+
     if (targetConfirm) {
-        this.emit('@delete',{ query:event.target.parentNode.dataset.key });
+        this.emit('@delete', { query: evtTarget.parentNode.dataset.key });
     }
+}
+
+ResultView.onModified = function (e) {
+    const evtTarget = event.target;
+    const targetConfirm = evtTarget.tagName.toLowerCase() === 'span'
+        && evtTarget.classList[0] === 'write__txt';
+    if (targetConfirm) {
+        this.emit('@modified', { changeNum: evtTarget.parentNode });
+    }
+}
+
+ResultView.renderInp = function (e, currNum) {
+    console.log(currNum);
+
 }
 
 export default ResultView;
