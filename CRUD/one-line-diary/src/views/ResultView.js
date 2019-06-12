@@ -6,6 +6,10 @@ const ResultView = Object.create(View);
 
 ResultView.setup = function (el) {
     this.init(el);
+    console.log(this)
+    this.delEvt();
+
+    return this;
 }
 
 ResultView.messages = {
@@ -18,18 +22,29 @@ ResultView.render = function (data = []) {
 
 ResultView.getInputResultHTML = function (data) {
     return data.reduce((html, item, idx) => {
-        console.log(item, idx);
-        html += this.getInputReslutList(item);
+        html += this.getInputReslutList(item, idx);
         return html;
     }, '<ul class="write__menu">') + '</ul>';
 }
 
-ResultView.getInputReslutList = function (item) {
-    return `<li class="write__item">
+ResultView.getInputReslutList = function (item, idx) {
+    return `<li class="write__item" data-key=${item.id} data-sortNum=${idx}>
         <span class="write__txt">${item.text}</span>
         <span class="write__date">작성일:${item.date}</span>
         <span class="btn fourth write__del">del</span>
     </li>`;
+}
+
+ResultView.delEvt = function(){
+    this.el.addEventListener('click', e => this.onDel(e));
+}
+
+ResultView.onDel = function(e){
+    const targetConfirm = event.target.tagName.toLowerCase() === 'span' && event.target.classList[2] === 'write__del';
+    
+    if (targetConfirm) {
+        this.emit('@delete',{ query:event.target.parentNode.dataset.key });
+    }
 }
 
 export default ResultView;

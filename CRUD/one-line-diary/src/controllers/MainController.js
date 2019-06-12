@@ -12,6 +12,7 @@ export default {
             .on('@reset', e => this.onReset(e))
 
         ResultView.setup(document.querySelector('.write__list'))
+            .on('@delete', e => this.onDelete(e.detail.query))
     },
 
     onSubmit(input) {
@@ -22,6 +23,10 @@ export default {
         const formTarget = FormView.formInp;
         formTarget.value = '';
         formTarget.focus();
+    },
+
+    onDelete(delNum){
+        this.deleteApi(delNum);
     },
 
     nowDate() {
@@ -59,6 +64,28 @@ export default {
             },
             method: "POST",
             body: JSON.stringify({ text: inputTxt, date: currDate })
+        })
+            .then(res => res.json())
+            .then(data => data)
+            .catch(error => {
+                console.error(error);
+            })
+            .then(()=>{
+                WriteModel.getApi()
+                    .then(data => this.onPostResult(data))
+                    .catch(error => console.error(error));
+            })
+    },
+
+    deleteApi(delNum){
+        const url = `http://localhost:3000/posts/${delNum}`;
+
+        fetch(url, {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            method: "DELETE",
         })
             .then(res => res.json())
             .then(data => data)
