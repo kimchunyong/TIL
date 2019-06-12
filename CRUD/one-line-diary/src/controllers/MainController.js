@@ -32,6 +32,9 @@ export default {
         let hour = date.getHours();
         let minutes = date.getMinutes();
         let seconds = date.getSeconds();
+        let ampm = hour >= 12 ? 'pm' : 'am';
+        hour = hour % 12;
+        hour = hour ? hour : 12;
 
         if (month < 10) {
             month = "0" + month;
@@ -39,13 +42,9 @@ export default {
         if (day < 10) {
             day = "0" + day;
         }
-        if (hour > 12) {
-            hour = "pm:" + (hour - 12);
-        } else {
-            hour = 'am:' + hour;
-        }
+        
 
-        const today = `${year}-${month}-${day} ${hour}:${minutes}:${seconds}`;
+        const today = `${year}-${month}-${day} ${ampm}${hour}:${minutes}:${seconds}`;
         return today;
 
     },

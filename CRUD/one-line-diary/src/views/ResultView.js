@@ -26,7 +26,7 @@ ResultView.getInputResultHTML = function (data) {
 
 ResultView.getInputReslutList = function (item) {
     return `<li class="write__item">
-        ${item.text} <span class="write__date">${item.date}</span>
+        <span class="write__txt">${item.text}</span> <span class="write__date">${item.date}</span>
     </li>`;
 }
 
