@@ -16,9 +16,6 @@ export default {
 
     onSubmit(input) {
         this.postApi(input, this.nowDate());
-        WriteModel.getApi()
-            .then(data => this.onPostResult(data))
-            .catch(error => console.error(error));
     },
 
     onReset(e) {
@@ -55,7 +52,7 @@ export default {
 
     postApi(inputTxt, currDate) {
         const url = 'http://localhost:3000/posts';
-
+        
         fetch(url, {
             headers: {
                 'Accept': 'application/json',
@@ -68,7 +65,12 @@ export default {
             .then(data => data)
             .catch(error => {
                 console.error(error);
-            });
+            })
+            .then(()=>{
+                WriteModel.getApi()
+                    .then(data => this.onPostResult(data))
+                    .catch(error => console.error(error));
+            })
     },
 
     onPostResult(data) {
