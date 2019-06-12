@@ -31,7 +31,7 @@
 
 ## 폴더구조 one-line-diary
 
-```javascript
+```
 +--one-line-diary
   +-- node_modules
   +-- public
