@@ -37,10 +37,11 @@ ResultView.getInputReslutList = function (item, idx) {
 ResultView.cusEvt = function () {
     this.el.addEventListener('click', e => this.onDel(e));
     this.el.addEventListener('dblclick', e => this.onModified(e));
+    this.el.addEventListener('keyup', e => this.onModifedKeyup(e));
 }
 
 ResultView.onDel = function (e) {
-    const evtTarget = event.target;
+    const evtTarget = e.target;
     const targetConfirm = evtTarget.tagName.toLowerCase() === 'span'
         && evtTarget.classList[2] === 'write__del';
 
@@ -50,7 +51,7 @@ ResultView.onDel = function (e) {
 }
 
 ResultView.onModified = function (e) {
-    const evtTarget = event.target;
+    const evtTarget = e.target;
     const targetConfirm = evtTarget.tagName.toLowerCase() === 'span'
         && evtTarget.classList[0] === 'write__txt';
     if (targetConfirm) {
@@ -59,8 +60,34 @@ ResultView.onModified = function (e) {
 }
 
 ResultView.renderInp = function (e, currNum) {
-    console.log(currNum);
+    const modifiedTarget = currNum.children[0];
+    const PrevText = modifiedTarget.textContent;
+    const currKey = currNum.dataset.key;
 
+    modifiedTarget.innerHTML = `<input type="text" class="modified__inp" placeholder=${PrevText} data-key=${currKey}>`;
+    modifiedTarget.querySelector('.modified__inp').focus();
+}
+
+ResultView.onModifedKeyup = function(e){
+    const inpTarget = e.target;
+    const modifiedVal = e.target.value;
+    const modifiedLen = modifiedVal.length;
+    const currKey = e.target.dataset.key;
+    const enter = 13;
+
+    if (e.keyCode !== enter) return;
+    
+    if(modifiedLen) {
+        this.emit('@modifiedVal', { modifiedVal: [modifiedVal,currKey,inpTarget] });
+        return;
+    }
+
+    alert('다시 입력해주세요');
+}
+
+ResultView.renderCmp = function(inpTargete, cmplTxt){
+    inpTargete.parentNode.innerHTML = cmplTxt;
+    inpTargete.remove();
 }
 
 export default ResultView;

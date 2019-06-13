@@ -14,6 +14,7 @@ export default {
         ResultView.setup(document.querySelector('.write__list'))
             .on('@delete', e => this.onDelete(e.detail.query))
             .on('@modified', e => this.onModified(e, e.detail.changeNum))
+            .on('@modifiedVal', e => this.onModifiedVal(e, e.detail.modifiedVal[0],e.detail.modifiedVal[1],e.detail.modifiedVal[2]))
 
     },
 
@@ -33,6 +34,10 @@ export default {
 
     onModified(e, changeNum) {
         ResultView.renderInp(e, changeNum)
+    },
+
+    onModifiedVal(e, modifiedVal, key, inpTarget){
+        this.fetchApi(e, modifiedVal, key, inpTarget);
     },
 
     nowDate() {
@@ -103,6 +108,27 @@ export default {
                     .then(data => this.onPostResult(data))
                     .catch(error => console.error(error));
             })
+    },
+
+    fetchApi(e, fetchTxt, fetchNum, inpTarget){
+        console.log(fetchTxt, fetchNum, inpTarget);
+        const url = `http://localhost:3000/posts/${fetchNum}`;
+
+        fetch(url, {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            method: "PATCH",
+            body: JSON.stringify({ text: fetchTxt })
+        })
+            .then(res => res.json())
+            .then(data => data)
+            .catch(error => {
+                console.error(error);
+            })
+
+            ResultView.renderCmp(inpTarget,fetchTxt);
     },
 
     onPostResult(data) {

@@ -288,3 +288,12 @@ button span:before, button span:after
     background-position: 0;
     color: #fff;
   }
+
+  input[type="text"].modified__inp{
+    height: initial;
+    width: calc( 100% - 80px);
+    padding: 5px;
+    font-size: 14px;
+    color: #8253f1;
+    border: 1px solid #9e80e4;
+  }
