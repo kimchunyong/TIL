@@ -14,7 +14,8 @@ export default {
         ResultView.setup(document.querySelector('.write__list'))
             .on('@delete', e => this.onDelete(e.detail.query))
             .on('@modified', e => this.onModified(e, e.detail.changeNum))
-            .on('@modifiedVal', e => this.onModifiedVal(e, e.detail.modifiedVal[0],e.detail.modifiedVal[1],e.detail.modifiedVal[2]))
+            .on('@modifiedVal', e => this.onModifiedVal(e, e.detail.modifiedVal[0], e.detail.modifiedVal[1], e.detail.modifiedVal[2]))
+            .on('@onPrevClose', e => this.onPrevLoad(e.detail.close[0], e.detail.close[1]))
 
     },
 
@@ -36,8 +37,12 @@ export default {
         ResultView.renderInp(e, changeNum)
     },
 
-    onModifiedVal(e, modifiedVal, key, inpTarget){
+    onModifiedVal(e, modifiedVal, key, inpTarget) {
         this.fetchApi(e, modifiedVal, key, inpTarget);
+    },
+
+    onPrevLoad(parentTarget, prevTxt) {
+        ResultView.onCancle(parentTarget, prevTxt)
     },
 
     nowDate() {
@@ -110,7 +115,7 @@ export default {
             })
     },
 
-    fetchApi(e, fetchTxt, fetchNum, inpTarget){
+    fetchApi(e, fetchTxt, fetchNum, inpTarget) {
         console.log(fetchTxt, fetchNum, inpTarget);
         const url = `http://localhost:3000/posts/${fetchNum}`;
 
@@ -128,7 +133,7 @@ export default {
                 console.error(error);
             })
 
-            ResultView.renderCmp(inpTarget, fetchTxt);
+        ResultView.renderCmp(inpTarget, fetchTxt);
     },
 
     onPostResult(data) {

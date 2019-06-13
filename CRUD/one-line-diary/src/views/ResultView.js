@@ -38,6 +38,7 @@ ResultView.cusEvt = function () {
     this.el.addEventListener('click', e => this.onDel(e));
     this.el.addEventListener('dblclick', e => this.onModified(e));
     this.el.addEventListener('keyup', e => this.onModifedKeyup(e));
+    this.el.addEventListener('click', e => this.onPrevTxt(e));
 }
 
 ResultView.onDel = function (e) {
@@ -48,6 +49,8 @@ ResultView.onDel = function (e) {
     if (targetConfirm) {
         this.emit('@delete', { query: evtTarget.parentNode.dataset.key });
     }
+
+    return;
 }
 
 ResultView.onModified = function (e) {
@@ -57,6 +60,8 @@ ResultView.onModified = function (e) {
     if (targetConfirm) {
         this.emit('@modified', { changeNum: evtTarget.parentNode });
     }
+
+    return;
 }
 
 ResultView.renderInp = function (e, currNum) {
@@ -65,15 +70,12 @@ ResultView.renderInp = function (e, currNum) {
     const currKey = currNum.dataset.key;
 
     modifiedTarget.innerHTML = `<input type="text" class="modified__inp" placeholder=${PrevText} data-key=${currKey}>
-                                    <div class="close-container">
-                                        <div class="leftright"></div>
-                                        <div class="rightleft"></div>
-                                    </div>
-                                `;
+                                <div class="close-container"></div>`;
+
     modifiedTarget.querySelector('.modified__inp').focus();
 }
 
-ResultView.onModifedKeyup = function(e){
+ResultView.onModifedKeyup = function (e) {
     const inpTarget = e.target;
     const modifiedVal = e.target.value;
     const modifiedLen = modifiedVal.length;
@@ -81,18 +83,44 @@ ResultView.onModifedKeyup = function(e){
     const enter = 13;
 
     if (e.keyCode !== enter) return;
-    
-    if(modifiedLen) {
-        this.emit('@modifiedVal', { modifiedVal: [modifiedVal,currKey,inpTarget] });
+
+    if (modifiedLen) {
+        this.emit('@modifiedVal', { modifiedVal: [modifiedVal, currKey, inpTarget] });
         return;
     }
 
     alert('다시 입력해주세요');
+    return;
 }
 
-ResultView.renderCmp = function(inpTargete, cmplTxt){
+ResultView.renderCmp = function (inpTargete, cmplTxt) {
     inpTargete.parentNode.innerHTML = cmplTxt;
     inpTargete.remove();
+}
+
+ResultView.onPrevTxt = function (e) {
+    const onPrevTarget = e.target;
+    const parentTarget = onPrevTarget.parentNode.parentNode;
+    const targetConfirm = onPrevTarget.tagName.toLowerCase() === 'div'
+        && onPrevTarget.classList[0] === 'close-container';
+    if (targetConfirm) {
+        const onPrevVal = onPrevTarget.previousElementSibling.placeholder;
+        this.emit('@onPrevClose', { close: [parentTarget, onPrevVal] });
+    }
+
+    return;
+}
+
+ResultView.onCancle = function (...prevLoad) {
+    const [parentTarget, PrevTxt] = prevLoad;
+    const targetChild = parentTarget.children[0];
+    const newSpan = document.createElement('span');
+    newSpan.textContent = PrevTxt;
+    newSpan.classList = 'write__txt';
+
+    targetChild.remove();
+    parentTarget.prepend(newSpan);
+
 }
 
 export default ResultView;
