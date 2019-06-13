@@ -64,7 +64,12 @@ ResultView.renderInp = function (e, currNum) {
     const PrevText = modifiedTarget.textContent;
     const currKey = currNum.dataset.key;
 
-    modifiedTarget.innerHTML = `<input type="text" class="modified__inp" placeholder=${PrevText} data-key=${currKey}>`;
+    modifiedTarget.innerHTML = `<input type="text" class="modified__inp" placeholder=${PrevText} data-key=${currKey}>
+                                    <div class="close-container">
+                                        <div class="leftright"></div>
+                                        <div class="rightleft"></div>
+                                    </div>
+                                `;
     modifiedTarget.querySelector('.modified__inp').focus();
 }
 

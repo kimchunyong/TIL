@@ -128,7 +128,7 @@ export default {
                 console.error(error);
             })
 
-            ResultView.renderCmp(inpTarget,fetchTxt);
+            ResultView.renderCmp(inpTarget, fetchTxt);
     },
 
     onPostResult(data) {
