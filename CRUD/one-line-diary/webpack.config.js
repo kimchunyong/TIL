@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const path = require('path');
 const ROOT_DIR = path.resolve(__dirname, './');
@@ -29,6 +30,10 @@ module.exports = {
             presets: ['@babel/preset-env'],
           },
         },
+      },
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
   },
@@ -65,5 +70,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'public/index.html',
     }),
+    new MiniCssExtractPlugin({ filename: 'style.css' }),
   ],
 };

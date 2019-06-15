@@ -1,7 +1,11 @@
 {
-    "posts": [
-
-    ],
-    "comments": [],
-    "profile": {}
+  "posts": [
+    {
+      "text": "asddd",
+      "date": "2019-06-15 pm2:36:44",
+      "id": 1
+    }
+  ],
+  "comments": [],
+  "profile": {}
 }
