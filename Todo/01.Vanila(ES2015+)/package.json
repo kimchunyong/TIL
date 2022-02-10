@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "babel-preset-env": "^1.7.0",
-    "node-sass": "^4.11.0"
+    "node-sass": "^7.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
